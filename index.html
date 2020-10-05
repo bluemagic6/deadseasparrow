@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dead Sea Sparrow</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/lux/bulmaswatch.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+    <style>
+        .title, .content {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+               <h2>Dead Sea Sparrow</h2>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu" style="background-color: white">
+            <div class="navbar-start has-text-centered" style="flex-grow: 1; justify-content: center">
+                <a class="navbar-item" href="#">Spotify</a>
+                <a class="navbar-item" href="http://www.instagram.com/deadseasparrow">Instagram</a>
+                <a class="navbar-item" href="http://www.facebook.com/deadseasparrow">Facebook</a>
+                <a class="navbar-item" href="https://www.youtube.com/channel/UCHBv6WmYtZ3YVG-BUgnfpqg?view_as=subscriber">Youtube</a>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+    </nav>
+    <section class="hero">
+        <figure class="image">
+            <img src="images/header1.jpg" />
+        </figure>
+    </section>
+
+    <section class="section" style="background-color: #070808;">
+        <div class="container has-text-centered">
+            <div class="columns is-centered" style="padding: 2rem">
+                <div class="column is-6">
+                    <h2 class="title">Latest Release</h2>
+                    <div class="content">
+                        Our first full length album Up The Mountain is now out. You can stream
+                        it wherever you listen to your favorite music.
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="images/mountain.jpg" alt="album cover" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="content" style="padding: 2rem">
+                        <span class="icon is-large">
+                            <i class="fab fa-3x fa-spotify"></i>
+                        </span>
+                        <span class="icon is-large">
+                            <i class="fab fa-3x fa-itunes"></i>
+                        </span>
+                        <span class="icon is-large">
+                            <i class="fab fa-3x fa-bandcamp"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <iframe src="https://deadseasparrow.substack.com/embed" width="100%" height="320" frameborder="0"
+                        scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(
+                document.querySelectorAll(".navbar-burger"),
+                0
+            );
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+                // Add a click event on each of them
+                $navbarBurgers.forEach((el) => {
+                    el.addEventListener("click", () => {
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle("is-active");
+                        $target.classList.toggle("is-active");
+                    });
+                });
+            }
+        });
+    </script>
+</body> 
+
+</html>
